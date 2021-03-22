@@ -1,0 +1,47 @@
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, 
+.navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link 
+{
+  
+}
+
+.navbar.navbar-light.navbar-expand-md.navigation-clean-button:hover {
+  color: #fff !important;
+}
+
+.top_section .btn:not(:disabled):not(.disabled) {
+  position: relative;
+  top: 51%;
+  left: 5%;
+  background: #25ade2;
+  padding: 4px 4px;
+  font-weight: 467;
+  font-size: medium;
+  /*transform: translate(6%, 201%);*/
+  /*-ms-transform: translate(6%, 201%);*/
+}
+
+.navbar-light .navbar-nav .nav-link {
+  width: max-content !important;
+}
+
+.top_section {
+  position: relative;
+}
+
+.col.top_col {
+  background: inherit;
+}
+
+
+
+
+
+/* Add carousel styles */
+.carousel ul {
+  list-style: none;
+  height: 10000px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  padding: 0px;
+}

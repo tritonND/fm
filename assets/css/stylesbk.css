@@ -1,0 +1,125 @@
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, 
+.navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link 
+{
+  
+}
+
+.navbar.navbar-light.navbar-expand-md.navigation-clean-button:hover {
+  color: #fff !important;
+}
+
+.top_section .btn:not(:disabled):not(.disabled) {
+  position: relative;
+  top: 51%;
+  left: 5%;
+  background: #25ade2;
+  padding: 4px 4px;
+  font-weight: 467;
+  font-size: medium;
+  /*transform: translate(6%, 201%);*/
+  /*-ms-transform: translate(6%, 201%);*/
+}
+
+.navbar-light .navbar-nav .nav-link {
+  width: max-content !important;
+}
+
+.top_section {
+  position: relative;
+}
+
+.col.top_col {
+  background: inherit;
+}
+
+
+
+
+
+/* Add carousel styles */
+.carousel .item {
+  padding-bottom: 56.25%;
+  background-size: cover;
+}
+.carousel .item:nth-child(1) {
+  background-image: url('https://via.placeholder.com/1280x720?text=Slide 1');
+}
+.carousel .item:nth-child(2) {
+  background-image: url('https://via.placeholder.com/1280x720?text=Slide 2');
+}
+.carousel .item:nth-child(3) {
+  background-image: url('https://via.placeholder.com/1280x720?text=Slide 3');
+}
+.carousel.vertical .carousel-inner > .item {
+  transition: 0.6s ease-in-out top;
+}
+@media all and (transform-3d), (-webkit-transform-3d) {
+  .carousel.vertical .carousel-inner > .item {
+    transition: transform 0.6s ease-in-out;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -ms-perspective: 1000;
+    perspective: 1000;
+  }
+  .carousel.vertical .carousel-inner > .item.next,
+  .carousel.vertical .carousel-inner > .item.active.right {
+    top: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  .carousel.vertical .carousel-inner > .item.prev,
+  .carousel.vertical .carousel-inner > .item.active.left {
+    top: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  .carousel.vertical .carousel-inner > .item.next.left,
+  .carousel.vertical .carousel-inner > .item.prev.right,
+  .carousel.vertical .carousel-inner > .item.active {
+    top: 0;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.carousel.vertical .carousel-inner > .active {
+  top: 0;
+}
+.carousel.vertical .carousel-inner > .next,
+.carousel.vertical .carousel-inner > .prev {
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+.carousel.vertical .carousel-inner > .next {
+  left: 0;
+  top: 100%;
+}
+.carousel.vertical .carousel-inner > .prev {
+  left: 0;
+  top: -100%;
+}
+.carousel.vertical .carousel-inner > .next.left,
+.carousel.vertical .carousel-inner > .prev.right {
+  top: 0;
+}
+.carousel.vertical .carousel-inner > .active.left {
+  left: 0;
+  top: -100%;
+}
+.carousel.vertical .carousel-inner > .active.right {
+  left: 0;
+  top: 100%;
+}
+.carousel.vertical .carousel-indicators,
+.carousel-indicators-vertical {
+  right: 20px;
+  top: 50%;
+  transform: translate(-50%);
+  bottom: auto;
+  left: auto;
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+.carousel.vertical .carousel-indicators li,
+.carousel-indicators-vertical li {
+  display: block;
+  margin: 5px 0;
+}
