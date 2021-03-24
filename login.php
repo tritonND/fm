@@ -4,12 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>fm</title>
+    <title>Login</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/carousel.css">
     <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="assets/fonts/Poppins-Black.ttf" rel="stylesheet">
@@ -140,16 +142,16 @@ input:focus {
     </ul>
     <form class="form-inline my-2 my-lg-2" style="margin-right: 1%;">
       <li class="nav-item" style="list-style-type: none;">
-        <a class="btn btn-light action-button mr-sm-2" role="button" href="#" style="border-radius: 8px; border-color: #6168a0; color:#fff ;background: #4c5282;padding-top: 4px;padding-bottom: 4px;padding-right: 14px;padding-left: 14px;margin-right: 8px;">Sign Up</a>    
+        <a class="btn btn-light action-button mr-sm-2" role="button" href="register" style="border-radius: 8px; border-color: #6168a0; color:#fff ;background: #4c5282;padding-top: 4px;padding-bottom: 4px;padding-right: 14px;padding-left: 14px;margin-right: 8px;">Sign Up</a>    
      
         <!-- <a class="btn btn-light action-button mr-sm-2" role="button" href="#" style="border-radius: 8px; color:#fff ;background: rgba(73,162,162,0);padding-top: 4px;padding-bottom: 4px;padding-right: 14px;padding-left: 14px;margin-right: 8px;">Sign Up</a>     -->
      
       </li>
    </form>
 
-    <form class="form-inline my-2 my-lg-2" style="margin-right: 0%; display:none">
+    <form class="form-inline my-2 my-lg-2" style="margin-right: 0%; ">
       <li class="nav-item" style="list-style-type: none;">
-        <a class="btn btn-light action-button my-2 my-sm-0" role="button" href="#" style="border-radius: 8px;background: rgb(35,174,226);padding-top: 4px;padding-bottom: 4px;padding-right: 14px;padding-left: 14px;margin-right: 3px;border-color: rgb(0,0,0);">Login</a>  
+        <a class="btn btn-light action-button my-2 my-sm-0" role="button" href="#" style="display:none; border-radius: 8px;background: rgb(35,174,226);padding-top: 4px;padding-bottom: 4px;padding-right: 14px;padding-left: 14px;margin-right: 3px;border-color: rgb(0,0,0);">Login</a>  
       </li>
       </form>
         </div>
@@ -199,7 +201,7 @@ input:focus {
                 
                           <div class="form-group" style="margin-bottom: 3%;">
                             <label for="password" class="labels">Password</label>
-                            <input type="text" class="form-control inps" id="password" name="password" placeholder="" required>
+                            <input type="password" class="form-control inps" id="password" name="password" placeholder="" required>
                             <small class="form-text"  style="color: #fff; font-style: italic; font-weight: bolder;">Enter Password here</small>
                             <div class="invalid-feedback">Please provide a valid password  </div>
                           </div>

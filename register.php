@@ -4,11 +4,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>fm</title>
+    <title>Register</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/carousel.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+
+     
+   <script src="assets/js/sweetalert2.all.min.js"></script>
+   <link href="assets/css/sweetalert2.min.css" rel="stylesheet">
+ 
 
     <!-- <link rel="stylesheet/less" type="text/css" href="assets/css/carousel.less" /> -->
    
@@ -68,7 +76,7 @@
     width: 60%;
     height: 2.6rem;
     border-radius: 10px;
-    margin-bottom: 4%;
+    margin-bottom: 0%;
 
 }
 .labels {
@@ -83,7 +91,6 @@
         /*font-weight: 300;*/
         src: url('assets/fonts/Poppins-Regular.ttf'); /* IE9 Compat Modes */
         src: local('Poppins'), local('Poppins-Regular'),
-        url('assets/fonts/Poppins-Light') format('truetype'), /* IE6-IE8 */
         url('assets/fonts/Poppins-ExtraLight.ttf') format('truetype'), /* IE6-IE8 */
         url('assets/fonts/Poppins-Bold.ttf') format('truetype'), /* IE6-IE8 */
         url('assets/fonts/Poppins-Thin.ttf') format('truetype'); /* IE6-IE8 */
@@ -99,7 +106,6 @@
         /*font-weight: 300;*/
         src: url('assets/fonts/Poppins-Bold.ttf'); /* IE9 Compat Modes */
         src: local('Poppins_bold'), local('Poppins-Bold'),
-        url('assets/fonts/Poppins-Light') format('truetype'), /* IE6-IE8 */
         url('assets/fonts/Poppins-ExtraLight.ttf') format('truetype'), /* IE6-IE8 */
         url('assets/fonts/Poppins-Bold.ttf') format('truetype'), /* IE6-IE8 */
         url('assets/fonts/Poppins-Thin.ttf') format('truetype'); /* IE6-IE8 */
@@ -132,7 +138,8 @@
     </ul>
     <form class="form-inline my-2 my-lg-2" style="margin-right: 1%;">
       <li class="nav-item" style="list-style-type: none;">
-        <a class="btn btn-light action-button mr-sm-2" role="button" href="#" style="border-radius: 8px; border-color: #6168a0; color:#fff ;background: #4c5282;padding-top: 4px;padding-bottom: 4px;padding-right: 14px;padding-left: 14px;margin-right: 8px;">Sign Up</a>    
+      
+        <a class="btn btn-light action-button mr-sm-2" role="button" href="#" style=" display:none ;border-radius: 8px; border-color: #6168a0; color:#fff ;background: #4c5282;padding-top: 4px;padding-bottom: 4px;padding-right: 14px;padding-left: 14px;margin-right: 8px;">Sign Up</a>    
      
         <!-- <a class="btn btn-light action-button mr-sm-2" role="button" href="#" style="border-radius: 8px; color:#fff ;background: rgba(73,162,162,0);padding-top: 4px;padding-bottom: 4px;padding-right: 14px;padding-left: 14px;margin-right: 8px;">Sign Up</a>     -->
      
@@ -141,7 +148,7 @@
 
     <form class="form-inline my-2 my-lg-2" style="margin-right: 0%;">
       <li class="nav-item" style="list-style-type: none;">
-        <a class="btn btn-light action-button my-2 my-sm-0" role="button" href="#" style="border-radius: 8px;background: rgb(35,174,226);padding-top: 4px;padding-bottom: 4px;padding-right: 14px;padding-left: 14px;margin-right: 3px;border-color: rgb(0,0,0);">Login</a>  
+        <a class="btn btn-light action-button my-2 my-sm-0" role="button" href="login" style="border-radius: 8px;background: rgb(35,174,226);padding-top: 4px;padding-bottom: 4px;padding-right: 14px;padding-left: 14px;margin-right: 3px;border-color: rgb(0,0,0);">Login</a>  
       </li>
       </form>
         </div>
@@ -156,35 +163,51 @@
             <div class="row" style="margin-right: 0px;margin-left: 0px;">
                 <div  class=" col-md-6 left" style="padding-top: 10px;padding-right: 0px;padding-left: 50px;background: #e5e9f1;">
                     <h1 style="margin-top: 6px; font-weight: bolder; font-family: Poppins_bold;">Create account</h1>
-
-                    <!-- <label class="d-block">Name</label>
-                    <input class="d-block inps" type="text" required="" style="width: 340px;height: 35px;background: rgb(191,196,208);border-color: #e5e9f1;padding-top: 0px;margin-top: -4px;"> -->
+         
+               <!-- Start Spinner -->
+                   <div class="col-xs-12 app-loader" style="display: none; position: fixed; top: 0; bottom: 0; width: 100%; height: 100%;
+                left: 0; text-align: center; z-index: 3; padding-top: 15em;">
+              <div style="background-color: rgba(0,0,0,0.7); display: block; width: 50%; margin-left: 25%; margin-right: 25%">
+                <!-- <i class="fa fa-cog fa-spin" style="font-size: 8em; color: #ffffff"></i> -->
+                <i class="fa fa-spinner fa-pulse" style="font-size: 5.5em; color: #ffffff; margin: 25px;"></i>
+                <!-- <i class="fa fa-heartbeat fa-pulse" style="font-size: 10em; color: #ffffff"></i> -->
+                <div class="app-loader-message" style="color: #ffffff;"></div>
+              </div>
+               </div>
+               <!-- End Spinner -->
                 
-                
-                    <form id="register" >
+                    <form id="registerForm" method="POST" class="needs-validation" novalidate>
                         <div class="form-group">
                           <label for="fname" class="labels" >Name</label>
-                          <input type="text" class="form-control inps" id="fname" placeholder="">
+                          <input type="text" class="form-control inps" id="fname" name="fname" placeholder="" required>
+                          <div class="invalid-feedback">Please provide fullname  </div>
                         </div>
+
                         <div class="form-group">
-                          <label for="lname" class="labels">E-mail address</label>
-                          <input type="text" class="form-control inps" id="email" placeholder="">
+                          <label for="email" class="labels">E-mail address</label>
+                          <input type="email" class="form-control inps" id="email" name="email" placeholder="" required>
+                          <div class="invalid-feedback">Please provide a valid email address  </div>
                         </div>
 
 
                         <div class="form-group">
-                            <label for="lname" class="labels">Phone Number</label>
-                            <input type="text" class="form-control inps" id="email" placeholder="">
+                            <label for="phonenumber" class="labels">Phone Number</label>
+                            <input type="text" class="form-control inps" id="phonenumber" name="phonenumber" placeholder="" pattern="(0[1-9]{1}[0-9]{9}|\+234[1-9]{1}[0-9]{9})"
+                                       data-required-error="phone number is required"
+                                       data-pattern-error="incorrect phone number format" required>
+                            <div class="invalid-feedback">Please provide a valid phone number </div>
                           </div>
 
                           <div class="form-group">
-                            <label for="lname" class="labels">Password</label>
-                            <input type="text" class="form-control inps" id="email" placeholder="">
+                            <label for="password" class="labels">Password</label>
+                            <input type="password" class="form-control inps" id="password"  name="password" placeholder="" required>
+                            <div class="invalid-feedback">Please provide password  </div>
                           </div>
 
                           <div class="form-group">
-                            <label for="lname" class="labels">Repeat Password</label>
-                            <input type="text" class="form-control inps" id="email" placeholder="">
+                            <label for="password2" class="labels">Repeat Password</label>
+                            <input type="password" class="form-control inps was-validated" id="password2" name="password2" placeholder="" required >
+                            <div id="password2x" class="invalid-feedback">Please repeat password </div>
                           </div>
 
 
@@ -193,7 +216,7 @@
                             <input type="checkbox" style="" class="form-check-input" id="agree" required>
                             <label style="font-style:italic;" class="form-check-label" for="agree">I agree to the <a href="#" style="text-decoration: underline;">Terms</a> and <a style="text-decoration: underline;" href="#">Privacy Policy</a></label>
                           </div>
-                          <button style="border-radius: 25px; padding: 10px 80px; " type="button" class="btn btn-lg btn-dark">Create Account</button>
+                          <button id="mysubmit" style="border-radius: 25px; padding: 10px 80px; " type="submit" class="btn btn-lg btn-dark" disabled>Create Account</button>
                       
                     </form>
                 
@@ -226,6 +249,116 @@
     <script src="assets/js/carousel2.js"></script>
 
      <!-- <script src="assets/bootstrap/js/less@3.13" ></script> -->
+
+     <script>
+
+$('#password2').keyup(function() {
+     var password = $('#password').val();
+     if (password !== $('#password2').val()){
+      // $('#password2').removeClass('has-success').addClass('has-error');
+      $('#password2').addClass('has-error');
+      $('#mysubmit').attr('disabled', 'disabled'); 
+     
+      // console.log("password mismatch");
+     }
+
+     else{
+      // console.log("password match found");
+      $('#mysubmit').removeAttr('disabled');
+       
+     }
+   });
+
+  
+
+
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})();
+
+  $('#registerForm').on("submit", function(submitEvent){
+            
+            // form was successfully validated
+            if(! submitEvent.isDefaultPrevented()) {
+                // prevent the form from submitting automatically
+                submitEvent.preventDefault();
+
+              
+                // display the app-loader
+                $('.app-loader').css("display", "block");
+                $('.app-loader-message').html("<div>Registration in progress...</div>" +
+                    "<div>PLEASE DO NOT CLOSE BROWSER</div>");
+                // submit the from via ajax
+
+
+
+                var x=$.ajax({
+                    url: "services/fmregister", // Url to which the request is send
+                    type: "POST",             // Type of request to be send, called as method
+                    data: new FormData($('#registerForm').get(0)), // Data sent to server, a set of key/value pairs (i.e. form fields and values)
+                    contentType: false,       // The content type used when sending data to the server.
+                    dataType:"text",
+                    timeout: 300000,
+                    cache: false,             // disable page caching
+                    processData: false
+            });
+
+            x.done(function(myresponse)
+            {
+                console.log(myresponse);
+                if(myresponse === 'success'){
+                    console.log(myresponse);
+                    $('.app-loader').css("display", "none");
+                    Swal.fire({
+                          position: 'center',
+                          icon: 'success',
+                          title: 'Registration Was successful',
+                          showConfirmButton: false,
+                          timer: 2500
+                        });
+
+                        setTimeout(function(){
+                          location.href = "login";
+                        }, 2500);
+
+                  
+                }
+                else{
+                    
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'User With same email exist',
+                        text: 'Please provide unique email address',
+                    
+                      });
+
+                      $('.app-loader').css("display", "none");
+                }
+
+            });
+
+
+            }
+        });
+
+</script>
+ 
 </body>
 
 </html>

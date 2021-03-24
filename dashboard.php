@@ -10,7 +10,8 @@
 	
     <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="assets/bootstrap/css/style.css">
+	
+    <link rel="stylesheet" href="assets/bootstrap/css/style.css">
 
         <style>
             .fas {
@@ -188,24 +189,30 @@
                 </button>
 
 
-                <a style="font-size: 18px; color: #a91414; margin-right: 7px;" href="#"> 
-                  <!-- <span class="fa fa-map-marker" style="color: #e5e9f1; font-size: 60px;"> </span> -->
-                  <span class="fa fa-save" style="color: #a91414; font-size: 20px;"> </span>
-                  <b style="text-decoration: underline;">Save</b>              
-                </a>
+                <button style="font-size: 18px; border: #e5e9f1; background: #e5e9f1; color: #343752; margin-right: 35px;" href="#">
+                    <a style="font-size: 18px; color: #a91414; margin-right: 7px;" href="#"> 
+                      <!-- <span class="fa fa-map-marker" style="color: #e5e9f1; font-size: 60px;"> </span> -->
+                      <span class="fa fa-save" style="color: #a91414; font-size: 20px;"> </span>
+                      <b style="text-decoration: underline;">Save</b>              
+                    </a>
+          </button>
 
-                <a style="font-size: 18px; color: #343752; margin-right: 13px;" href="#"> 
-                  <span class="fa fa-map-marker" style="color: #e5e9f1; font-size: 60px;"> </span>
-                  <span class="fa fa-plus-square" style="color: #343752; font-size: 20px;"> </span>
-                  <b style="text-decoration: underline;">Location Data</b>
-              
-                </a>
+                <button style="font-size: 18px; border: #e5e9f1; background: #e5e9f1; color: #343752; margin-right: 35px;" href="#">
+                    <a style="font-size: 18px; color: #343752; margin-right: 13px;" href="#"> 
+                      <span class="fa fa-map-marker" style="color: #e5e9f1; font-size: 60px;"> </span>
+                      <span class="fa fa-plus-square" style="color: #343752; font-size: 20px;"> </span>
+                      <b style="text-decoration: underline;">Location Data</b>              
+                    </a>
+          </button>
 
                 <!-- <h3>test <span class="badge "></span> <button type="button" class="btn btn-success"></button></h3> -->
-   <span style="background: #000; padding: 10px 2px;">
-    <button type="button" class="btn" style="background: #414776; color: #fff; width: 65px; font-size: 15px; border-radius: 0px;">9700</button>
-     <button type="button" class="btn" style="background: #000; color: #fff;  font-size: 10px;">Manage</button> 
-    </span>
+   
+                <!-- <button> -->
+                <span style="background: #000; padding: 10px 2px;">
+                <button type="button" class="btn" style="background: #414776; color: #fff; width: 65px; font-size: 15px; border-radius: 0px;">9700</button>
+                <button type="button" class="btn" style="background: #000; color: #fff;  font-size: 10px;">Manage</button> 
+                </span>
+                <!-- </button> -->
 
 
               </div>
