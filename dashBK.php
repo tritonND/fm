@@ -50,15 +50,6 @@ else{
         }
 
 
-        .myblocks{
-            display: inline-flex;
-            margin-left: 4%;
-            margin-bottom: 3%;
-        }
-
-        .badge-dark{
-            padding: 6px;
-        }
 
 
     </style>
@@ -201,16 +192,7 @@ else{
 
                 <div class="col-md-9">
 
-
-
-                    <button style="font-size: 18px; border: #e5e9f1; background: #e5e9f1; color: #343752; margin-right: 35px; margin-top: 30px" href="#" data-toggle="modal" data-target="#addDivisionModal">
-
-                        <b style="">Type : Ministry</b>
-
-                    </button>
-
-
-                    <button style="font-size: 18px; border: #e5e9f1; background: #e5e9f1; color: #343752; margin-right: 35px;display: none;" href="#" data-toggle="modal" data-target="#addDivisionModal">
+                    <button style="font-size: 18px; border: #e5e9f1; background: #e5e9f1; color: #343752; margin-right: 35px;" href="#" data-toggle="modal" data-target="#addDivisionModal">
                         <span class="fa fa-map-marker" style="color: #e5e9f1; font-size: 60px;"> </span>
                         <span class="fa fa-plus-square" style="color: #343752; font-size: 20px;"> </span>
                         <b style="text-decoration: underline;">Add Division</b>
@@ -218,7 +200,7 @@ else{
                     </button>
 
 
-                    <button style="font-size: 18px; border: #e5e9f1; background: #e5e9f1; color: #343752; margin-right: 35px; display: none;" href="#">
+                    <button style="font-size: 18px; border: #e5e9f1; background: #e5e9f1; color: #343752; margin-right: 35px;" href="#">
                         <a style="font-size: 18px; color: #a91414; margin-right: 7px;" href="#">
                             <!-- <span class="fa fa-map-marker" style="color: #e5e9f1; font-size: 60px;"> </span> -->
                             <span class="fa fa-save" style="color: #a91414; font-size: 20px;"> </span>
@@ -226,7 +208,7 @@ else{
                         </a>
                     </button>
 
-                    <button style="font-size: 18px; border: #e5e9f1; background: #e5e9f1; color: #343752; margin-right: 35px; display: none;" href="#">
+                    <button style="font-size: 18px; border: #e5e9f1; background: #e5e9f1; color: #343752; margin-right: 35px;" href="#">
                         <a style="font-size: 18px; color: #343752; margin-right: 13px;" href="#">
                             <span class="fa fa-map-marker" style="color: #e5e9f1; font-size: 60px;"> </span>
                             <span class="fa fa-plus-square" style="color: #343752; font-size: 20px;"> </span>
@@ -234,16 +216,15 @@ else{
                         </a>
                     </button>
 
-                    <!--Div for Manage-->
-                    <div style="width: 130px; display: inline-flex; height: 40px">
-                        <div  style="background: #144e94; width: 40%;  font-size: xx-large; text-align: center">
-                            <p id="manageVal" style="margin-top: -8px; color: #fff">0</p>
-                        </div>
-                        <div id="manage" style="background: #000; width: 60%;  font-size: x-small; text-align: center;">
-                            <p style="margin-top: 10px; color: #fff">Manage</p>
-                        </div>
-                    </div>
-                    <!--Div for Manage-->
+                    <!-- <h3>test <span class="badge "></span> <button type="button" class="btn btn-success"></button></h3> -->
+
+                    <!-- <button> -->
+                    <span style="background: #000; padding: 10px 2px;">
+                <button type="button" class="btn" style="background: #414776; color: #fff; width: 65px; font-size: 15px; border-radius: 0px;">9700</button>
+                <button type="button" class="btn" style="background: #000; color: #fff;  font-size: 10px;">Manage</button>
+                </span>
+                    <!-- </button> -->
+
 
                 </div>
             </div>
@@ -331,102 +312,14 @@ else{
         </div>
         <!-- End modal -->
 
-        <div style="margin: 0px 20px; ">
-            <h2 style="display: none" class="mb-4">KDSG</h2>
-        </div>
-
-        <!--start ForBlocks-->
-        <div id="forBlocks" style="margin: 25px 20px;">
-            <!--country-->
-            <div class="myblocks">
-                <div style="background: #e1edf7; width: 180px; font-size: medium; text-align: center; border-radius: 50px">
-                    <h6 style="color: #144e94; margin-top: 10px">Country </h6>
-                </div>
-
-                <div id="manage" style=" text-align: center; margin-top: 5px; margin-left: 10px">
-                    <span id="myCountry" class="badge badge-dark">1</span>
-                </div>
-            </div>
-            <br>
-            <!--Geo Zone-->
-            <div class="myblocks">
-                <div style="background: #e1edf7; width: 180px; font-size: medium; text-align: center; border-radius: 50px">
-                    <h6 style="color: #144e94; margin-top: 10px">Geo-Zone </h6>
-                </div>
-
-                <div style=" text-align: center; margin-top: 5px; margin-left: 10px">
-                    <span id="myGeoZone" class="badge badge-dark">6</span>
-                </div>
-            </div>
-            <br>
-
-            <!--           state-->
-            <div class="myblocks">
-                <div style="background: #e1edf7; width: 180px; font-size: medium; text-align: center; border-radius: 50px">
-                    <h6 style="color: #144e94; margin-top: 10px">State </h6>
-                </div>
-
-                <div style=" text-align: center; margin-top: 5px; margin-left: 10px">
-                    <span id="myState" class="badge badge-dark">1</span>
-                </div>
-            </div>
-            <br>
-
-            <!--Ministry-->
-            <div class="myblocks">
-                <div style="background: #e1edf7; width: 180px; font-size: medium; text-align: center; border-radius: 50px">
-                    <h6 style="color: #144e94; margin-top: 10px">Ministries </h6>
-                </div>
-
-                <div style=" text-align: center; margin-top: 5px; margin-left: 10px">
-                    <span id="myMinistry" class="badge badge-dark">0</span>
-                </div>
-            </div>
-
-            <br>
-
-            <!--Agency-->
-            <div class="myblocks">
-                <div style="background: #e1edf7; width: 180px; font-size: medium; text-align: center; border-radius: 50px">
-                    <h6 style="color: #144e94; margin-top: 10px">Agencies </h6>
-                </div>
-
-                <div style=" text-align: center; margin-top: 5px; margin-left: 10px">
-                    <span id="myAgency" class="badge badge-dark">0</span>
-                </div>
-            </div>
-
-            <br>
-
-            <hr style="text-align: center; width: 80%; height: 1px; background: #0b2e13 ">
-
-            <h6 style="margin-left: 10%; color: #343752">Add more <b>locations</b> as it applies</h6>
-
-            <div style="margin-left: 10%;">
-                <button id="addLGA" style="border-radius: 50px; background: #2d73b0; color: #fff" class="btn "> + Add Local Government Areas</button>
-
-                <button id="addWard" style="border-radius: 50px; background: #2d73b0; color: #fff" class="btn"> + Add Wards</button>
-            </div>
+        <div style="margin: 0px 20px">
+            <h2 class="mb-4">KDSG</h2>
 
 
-
-            <button style="font-size: 18px; border: #e5e9f1; background: #fff; color: #343752; margin-right: 35px; margin-left: 10%; margin-top: 5px; " href="#">
-                <a style="font-size: 18px; color: #a91414; margin-right: 7px;" href="#">
-                    <!-- <span class="fa fa-map-marker" style="color: #e5e9f1; font-size: 60px;"> </span> -->
-                    <span class="fa fa-save" style="color: #a91414; font-size: 20px;"> </span>
-                    <b style="text-decoration: underline;">Save</b>
-                </a>
-            </button>
 
         </div>
-        <!--end forBlocks-->
-
-
 
     </div>
-
-
-
 
 </div>
 
@@ -443,14 +336,6 @@ else{
         $('.app-loader-message').html("<div>Adding Entry...</div>" +
             "<div>PLEASE DO NOT CLOSE BROWSER</div>");
     });
-
-
-    $('#manage').click(function(){
-        console.log("manage button clicked");
-    });
-
-
-
 
 </script>
 

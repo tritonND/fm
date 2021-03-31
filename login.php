@@ -291,7 +291,7 @@ input:focus {
                         });
 
                         setTimeout(function(){
-                          location.href = "dashboard";
+                          location.href = "reset";
                         }, 2500);
 
                   

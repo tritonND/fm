@@ -13,8 +13,9 @@ if(mysqli_num_rows($result) > 0)
 {
     session_start();
     $row = mysqli_fetch_array($result);
-    $_SESSION['user'] = $row[1];
-    $_SESSION['privilege'] = $row[3];
+    $_SESSION['fullname'] = $row[1];
+    $_SESSION['user'] = $row[2];
+    $_SESSION['privilege'] = $row[4];
     echo "success";
 }
 else{

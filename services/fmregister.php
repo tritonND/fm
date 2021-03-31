@@ -1,6 +1,7 @@
 <?php
 
 include "connect.php";
+session_start();
 
     $fname = trim(strip_tags($_POST['fname']));
     $phonenumber = trim(strip_tags($_POST['phonenumber']));
@@ -20,7 +21,8 @@ else{
     $result = mysqli_query($conn, $mysql);
    
     if(mysqli_affected_rows($conn) >0){
-        echo "success"; 
+        echo "success";
+        $_SESSION["username"] = $email;
     }
     else {
         echo "fail";
