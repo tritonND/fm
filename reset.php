@@ -133,7 +133,7 @@ input:focus {
   <!-- Start of NavBar -->
   <nav class="navbar navbar-light navbar-expand-md" style="background: url(&quot;assets/img/menu.png&quot;) top / contain no-repeat, #343752; padding: 0.8rem; ">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index" style="background: url(&quot;assets/img/applogo.png&quot;) center / contain no-repeat;width: 56px;height: 45px;margin-right: 0px;padding: 0px;margin-top: 6px;margin-left: 16px;"></a>
+        <a class="navbar-brand" href="indexOLD.php" style="background: url(&quot;assets/img/applogo.png&quot;) center / contain no-repeat;width: 56px;height: 45px;margin-right: 0px;padding: 0px;margin-top: 6px;margin-left: 16px;"></a>
         <button data-toggle="collapse" class="navbar-toggler" data-target="#navbarTogglerDemo02">
             <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
         </button>
