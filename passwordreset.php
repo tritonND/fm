@@ -6,12 +6,6 @@ if(!isset($_SESSION["user"])){
     header( "Location: login");
 }
 else{
-if($_SESSION["status"] == 1){
-    
-}
-else{
-    header( "Location: dashboard");
-}
 
 }
 ?>
@@ -158,7 +152,7 @@ else{
             </ul>
             <form class="form-inline my-2 my-lg-2" style="margin-right: 1%;">
                 <li class="nav-item" style="list-style-type: none;">
-                    <a class="btn btn-light action-button mr-sm-2" role="button" href="#" style="border-radius: 8px; border-color: #6168a0; color:#fff ;background: #4c5282;padding-top: 4px;padding-bottom: 4px;padding-right: 14px;padding-left: 14px;margin-right: 8px;">Sign Up</a>
+                    <a class="btn btn-light action-button mr-sm-2" role="button" href="#" style="display: none ;border-radius: 8px; border-color: #6168a0; color:#fff ;background: #4c5282;padding-top: 4px;padding-bottom: 4px;padding-right: 14px;padding-left: 14px;margin-right: 8px;">Sign Up</a>
 
                     <!-- <a class="btn btn-light action-button mr-sm-2" role="button" href="#" style="border-radius: 8px; color:#fff ;background: rgba(73,162,162,0);padding-top: 4px;padding-bottom: 4px;padding-right: 14px;padding-left: 14px;margin-right: 8px;">Sign Up</a>     -->
 

@@ -2,12 +2,6 @@
 session_start();
 include "services/connect.php";
 
-if(!isset($_SESSION["user"])){
-    header( "Location: register");
-}
-else{
-
-}
 ?>
 <!DOCTYPE html>
 <html>
@@ -124,7 +118,7 @@ include "nav.php";
 
 
 <section>
-    <div class="container-fluid" style="padding-right: 0px;padding-left: 0px; background: #e5e9f1; margin-bottom: 20%;">
+    <div class="container-fluid" style="padding-right: 0px;padding-left: 0px; background: #e5e9f1; margin-bottom: 2%;">
         <div class="row no-gutters" >
 
             <div class="col-md-12" style="padding-right: 10px;padding-left: 10px; background: #e5e9f1; text-align: center;">

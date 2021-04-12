@@ -2,7 +2,7 @@
 session_start();
 include "services/connect.php";
 
-if(!isset($_SESSION["user"])){
+if(!isset($_SESSION["username"])){
     header( "Location: register");
 }
 else{

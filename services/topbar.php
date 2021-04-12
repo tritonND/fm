@@ -33,7 +33,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="float: left;">
                         <a class="dropdown-item" href="#"> <?php echo $_SESSION["fullname"];?> Profile</a>
-                        <a class="dropdown-item" href="reset">Password Reset</a>
+                        <a class="dropdown-item" href="passwordreset">Password Reset</a>
                         <a class="dropdown-item" href="services/logout">Logout</a>
                     </div>
                 </li>

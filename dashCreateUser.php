@@ -174,7 +174,7 @@ else{
 
 
             <!--            <form method="post" id="createUserForm" class="needs-validation" novalidate>-->
-            <form method="post" id="createUserForm" autocomplete="off">
+            <form id="createuserform" autocomplete="off" method="POST" class="needs-validation" novalidate >
                 <!-- Start Spinner -->
                 <div class="col-xs-12 app-loader" style="display: none; position: fixed; top: 0; bottom: 0; width: 100%; height: 100%;
                 left: 0; text-align: center; z-index: 3; padding-top: 15em;">
@@ -185,7 +185,16 @@ else{
                 </div>
                 <!-- End Spinner -->
 
-                <div class="form-group row" style="margin-bottom: 40px;">
+                <div class="form-group row" style="margin-bottom: 30px;">
+                    <label for="fullname" class="col-sm-3 col-form-label">Full Name<small style="color:red;">*</small></label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control imps" id="fullname" name="fullname" placeholder="" required>
+                        <div class="invalid-feedback">Enter fullname of the user </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group row" style="margin-bottom: 30px;">
                     <label for="email" class="col-sm-3 col-form-label">Email<small style="color:red;">*</small></label>
                     <div class="col-sm-9">
                         <input type="email" class="form-control imps" id="email" name="email" placeholder="" required>
@@ -193,7 +202,7 @@ else{
                     </div>
                 </div>
 
-                <div class="form-group row" style="margin-bottom: 40px;">
+                <div class="form-group row" style="margin-bottom: 30px;">
                     <label for="username" class="col-sm-3 col-form-label">Username<small style="color:red;">*</small></label>
                     <div class="col-sm-9">
                         <input type="text" class="form-control imps" id="username" name="username" minlength="5" data-minlength="5"
@@ -203,7 +212,7 @@ else{
                 </div>
 
 
-                <div class="form-group row" style="margin-bottom: 40px;">
+                <div class="form-group row" style="margin-bottom: 30px;">
                     <label for="password" class="col-sm-3 col-form-label">Password<small style="color:red;">*</small></label>
                     <div class="col-sm-9">
                         <input type="password" class="form-control imps" id="password" name="password" minlength="5" required>
@@ -212,7 +221,15 @@ else{
                 </div>
 
 
-                <div class="form-group row" style="margin-bottom: 40px;">
+                <div class="form-group row" style="margin-bottom: 30px;">
+                    <label for="location" class="col-sm-3 col-form-label">Location<small style="color:red;">*</small></label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control imps" id="location" name="location" minlength="5" required>
+                        <div class="invalid-feedback">Location is required  </div>
+                    </div>
+                </div>
+
+                <div class="form-group row" style="margin-bottom: 30px;">
                     <label class="col-sm-3 col-form-label" for="age">Role<small style="color:red;">*</small></label>
                     <div class="col-sm-9">
                             <select type="text" class="form-control imps" id="roles" name="roles" required>
@@ -221,12 +238,12 @@ else{
                                 <option value="System Administrator">System Administrator</option>
                                 <option value="Reports">Reports</option>
                             </select>
-                            <div class="invalid-feedback">Please select Role  </div>
+                            <div class="invalid-feedback">Please select User Role  </div>
                     </div>
                 </div>
 
 
-                <div class="form-group row" style="margin-bottom: 40px;">
+                <div class="form-group row" style="margin-bottom: 30px;">
                     <label for="permissions" class="col-sm-3 col-form-label">Permissions</label>
                     <div class="col-sm-9">
                         <input type="text" class="form-control imps" id="permissions" name="permissions" placeholder="" >
@@ -344,7 +361,7 @@ else{
             var x=$.ajax({
                 url: "services/fmcreateuser", // Url to which the request is send
                 type: "POST",             // Type of request to be send, called as method
-                data: new FormData($('#createUserForm').get(0)), // Data sent to server, a set of key/value pairs (i.e. form fields and values)
+                data: new FormData($('#createuserform').get(0)), // Data sent to server, a set of key/value pairs (i.e. form fields and values)
                 contentType: false,       // The content type used when sending data to the server.
                 dataType:"text",
                 timeout: 300000,
@@ -376,8 +393,8 @@ else{
 
                     Swal.fire({
                         icon: 'error',
-                        title: 'Organization Name Already exist',
-                        text: 'Please provide unique Organization name',
+                        title: 'UserName Already exist',
+                        text: 'Please provide unique username',
 
                     });
 
