@@ -8,6 +8,16 @@ if(!isset($_SESSION["user"])){
 else{
 
 }
+
+$id = $_GET["id"];
+//echo $id;
+
+$mysql2 = "SELECT * FROM fm_mdausers WHERE username = '$id'";
+$result2 = mysqli_query($conn, $mysql2);
+$row2 = mysqli_fetch_array($result2);
+
+if(mysqli_num_rows($result2) > 0) { }
+
 ?>
 
 <!doctype html>
@@ -89,7 +99,7 @@ else{
         include "services/topbar.php";
         ?>
 
-        <div class="container-fluid" style="background: #e5e9f1; margin-top: 0px; padding-top: 5px; display: none">
+        <div class="container-fluid" style="display: none;background: #e5e9f1; margin-top: 0px; padding-top: 5px; display: none">
 
             <div class="row no-gutters">
                 <div class="col-md-3">
@@ -106,14 +116,14 @@ else{
 
 
 
-                    <button style="font-size: 18px; border: #e5e9f1; background: #e5e9f1; color: #343752; margin-right: 35px; margin-top: 30px" href="#" data-toggle="modal" data-target="#addDivisionModal">
+                    <button style="display: none; font-size: 18px; border: #e5e9f1; background: #e5e9f1; color: #343752; margin-right: 35px; margin-top: 30px" href="#" data-toggle="modal" data-target="#addDivisionModal">
 
                         <b style="">Type : Ministry</b>
 
                     </button>
 
 
-                    <button style="font-size: 18px; border: #e5e9f1; background: #e5e9f1; color: #343752; margin-right: 35px;display: none;" href="#" data-toggle="modal" data-target="#addDivisionModal">
+                    <button style="display: none; font-size: 18px; border: #e5e9f1; background: #e5e9f1; color: #343752; margin-right: 35px;display: none;" href="#" data-toggle="modal" data-target="#addDivisionModal">
                         <span class="fa fa-map-marker" style="color: #e5e9f1; font-size: 60px;"> </span>
                         <span class="fa fa-plus-square" style="color: #343752; font-size: 20px;"> </span>
                         <b style="text-decoration: underline;">Add Division</b>
@@ -162,18 +172,25 @@ else{
         <div id="forBlocks" style="margin-left: 5px; margin-top: 25px; width: 60%;">
 
 
-            <button style="margin-left: 7%;margin-bottom: 20px; font-size: 18px; border: #fff; background: #fff; color: #343752; margin-right: 35px;" href="dashUserList">
-                <a style="font-size: 18px; color: #000; margin-right: 7px;" href="dashCreateUser">
+            <button style="margin-left: 7%;margin-bottom: 20px; font-size: 18px; border: #fff; background: #fff; color: #343752; margin-right: 35px;" href="dashlistusers">
+                <a style="font-size: 18px; color: #000; margin-right: 7px;" href="dashlistusers">
                     <span class="fa fa-users" style="color: #343752; font-size: 20px;"> </span>
                     <b style="text-decoration: underline;">User List</b>
                 </a>
             </button>
 
 
-            <button style="margin-bottom: 20px; font-size: 18px; border: #fff; background: #fff; color: #343752; margin-right: 35px;" href="dashCreateUser">
-                <a style="font-size: 18px; color: #000; margin-right: 7px;" href="dashCreateUser">
+            <button style="margin-bottom: 20px; font-size: 18px; border: #fff; background: #fff; color: #343752; margin-right: 35px;" href="dashcreateuser">
+                <a style="font-size: 18px; color: #000; margin-right: 7px;" href="dashcreateuser">
                      <span class="fa fa-user-plus" style="color: #343752; font-size: 20px;"> </span>
                     <b style="text-decoration: underline;">Create User</b>
+                </a>
+            </button>
+
+            <button style="margin-bottom: 20px; font-size: 18px; border: #fff; background: #fff; color: #343752; margin-right: 35px;" href="uploadusers">
+                <a style="font-size: 18px; color: #000; margin-right: 7px;" href="uploadusers">
+                    <span class="fa fa-user-plus" style="color: #343752; font-size: 20px;"> </span>
+                    <b style="text-decoration: underline;">Upload Users</b>
                 </a>
             </button>
 
@@ -193,7 +210,7 @@ else{
                 <div class="form-group row" style="margin-bottom: 30px;">
                     <label for="fullname" class="col-sm-3 col-form-label">Full Name<small style="color:red;">*</small></label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control imps" id="fullname" name="fullname" placeholder="" required>
+                        <input type="text" class="form-control imps" id="fullname" name="fullname" placeholder="" value="<?php echo $row2[3]; ?>" required>
                         <div class="invalid-feedback">Enter fullname of the user </div>
                     </div>
                 </div>
@@ -202,7 +219,7 @@ else{
                 <div class="form-group row" style="margin-bottom: 30px;">
                     <label for="email" class="col-sm-3 col-form-label">Email<small style="color:red;">*</small></label>
                     <div class="col-sm-9">
-                        <input type="email" class="form-control imps" id="email" name="email" placeholder="" required>
+                        <input type="email" class="form-control imps" id="email" name="email" placeholder="" value="<?php echo $row2[4]; ?>" required readonly>
                         <div class="invalid-feedback">Enter a Valid email address </div>
                     </div>
                 </div>
@@ -211,12 +228,13 @@ else{
                     <label for="username" class="col-sm-3 col-form-label">Username<small style="color:red;">*</small></label>
                     <div class="col-sm-9">
                         <input type="text" class="form-control imps" id="username" name="username" minlength="5" data-minlength="5"
-                               data-minlength-error="provide a username with minimum of 5 characters" required>
+                          readonly    data-minlength-error="provide a username with minimum of 5 characters" value="<?php echo $row2[1]; ?>" required>
                         <div class="invalid-feedback">Username is required  </div>
                     </div>
                 </div>
 
 
+               <!--
                 <div class="form-group row" style="margin-bottom: 30px;">
                     <label for="password" class="col-sm-3 col-form-label">Password<small style="color:red;">*</small></label>
                     <div class="col-sm-9">
@@ -224,12 +242,13 @@ else{
                         <div class="invalid-feedback">Password is required  </div>
                     </div>
                 </div>
+                -->
 
 
                 <div class="form-group row" style="margin-bottom: 30px;">
                     <label for="location" class="col-sm-3 col-form-label">Location<small style="color:red;">*</small></label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control imps" id="location" name="location" minlength="5" required>
+                        <input type="text" class="form-control imps" id="location" name="location" minlength="5" value="<?php echo $row2[5]; ?>" required>
                         <div class="invalid-feedback">Location is required  </div>
                     </div>
                 </div>
@@ -239,9 +258,9 @@ else{
                     <div class="col-sm-9">
                             <select type="text" class="form-control imps" id="roles" name="roles" required>
                                 <option disabled selected  hidden value=""></option>
-                                <option value="Desk User">Desk User</option>
-                                <option value="System Administrator">System Administrator</option>
-                                <option value="Reports">Reports</option>
+                                <option <?php if($row2[7] =="Desk User") echo 'selected="selected"'; ?> value="Desk User">Desk User</option>
+                                <option <?php if($row2[7] =="System Administrator") echo 'selected="selected"'; ?> value="System Administrator">System Administrator</option>
+                                <option <?php if($row2[7] =="Reports") echo 'selected="selected"'; ?>value="Reports">Reports</option>
                             </select>
                             <div class="invalid-feedback">Please select User Role  </div>
                     </div>
@@ -251,7 +270,7 @@ else{
                 <div class="form-group row" style="margin-bottom: 30px;">
                     <label for="permissions" class="col-sm-3 col-form-label">Permissions</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control imps" id="permissions" name="permissions" placeholder="" >
+                        <input type="text" class="form-control imps" id="permissions" name="permissions" placeholder="" value="<?php echo $row2[8]; ?>" >
                         <div class="invalid-feedback">Permissions is required  </div>
                     </div>
                 </div>
@@ -259,11 +278,12 @@ else{
 
                 <div style="margin-left: 17%;">
 
-                    <button type="submit" class="btn btn-sm" style="border-radius: 50px; background: #2d73b0; color: #fff; margin-bottom: 2%; box-shadow: 5px 5px 18px 1px #888888;">
-                        <i class="fa fa-save"></i> Save
+                    <button type="submit" class="btn btn-lg" style="border-radius: 50px; background: #2d73b0; color: #fff; margin-bottom: 2%; box-shadow: 5px 5px 18px 1px #888888;">
+                        <i class="fa fa-save"></i> Update
                     </button>
 
 
+                    <!--
                     <button type="submit" class="btn btn-sm" style="border-radius: 50px; background: #2d73b0; color: #fff; margin-bottom: 2%; box-shadow: 5px 5px 18px 1px #888888;">
                         <i class="fa fa-save"></i> Save and add another
                     </button>
@@ -273,7 +293,7 @@ else{
                     </button>
 
 
-                    <button type="reset" class="btn btn-sm btn-secondary" style="border-radius: 50px; margin-bottom: 2%;"> x Cancel</button>
+                   <button type="reset" class="btn btn-sm btn-secondary" style="border-radius: 50px; margin-bottom: 2%;"> x Cancel</button>-->
 
                 </div>
 
@@ -366,7 +386,7 @@ else{
 
 
             var x=$.ajax({
-                url: "services/fmcreateuser", // Url to which the request is send
+                url: "services/fmupdatemdauser", // Url to which the request is send
                 type: "POST",             // Type of request to be send, called as method
                 data: new FormData($('#createuserform').get(0)), // Data sent to server, a set of key/value pairs (i.e. form fields and values)
                 contentType: false,       // The content type used when sending data to the server.
@@ -385,13 +405,13 @@ else{
                     Swal.fire({
                         position: 'center',
                         icon: 'success',
-                        title: 'User Creation Was successful',
+                        title: 'User Update Was successful',
                         showConfirmButton: false,
                         timer: 2500
                     });
 
                     setTimeout(function(){
-                        location.href = "dashCreateUser";
+                        location.href = "dashlistusers";
                     }, 2500);
 
 

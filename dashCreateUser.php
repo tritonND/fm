@@ -28,6 +28,11 @@ else{
     <script src="assets/js/hyperform.min.js"></script>
 
 
+    <script src="assets/js/sweetalert2.all.min.js"></script>
+    <link href="assets/css/sweetalert2.min.css" rel="stylesheet">
+
+
+
 
     <style>
         .fas {
@@ -157,18 +162,25 @@ else{
         <div id="forBlocks" style="margin-left: 5px; margin-top: 25px; width: 60%;">
 
 
-            <button style="margin-left: 7%;margin-bottom: 20px; font-size: 18px; border: #fff; background: #fff; color: #343752; margin-right: 35px;" href="dashUserList">
-                <a style="font-size: 18px; color: #000; margin-right: 7px;" href="dashCreateUser">
+            <button style="margin-left: 7%;margin-bottom: 20px; font-size: 18px; border: #fff; background: #fff; color: #343752; margin-right: 35px;" href="dashlistusers">
+                <a style="font-size: 18px; color: #000; margin-right: 7px;" href="dashlistusers">
                     <span class="fa fa-users" style="color: #343752; font-size: 20px;"> </span>
                     <b style="text-decoration: underline;">User List</b>
                 </a>
             </button>
 
 
-            <button style="margin-bottom: 20px; font-size: 18px; border: #fff; background: #fff; color: #343752; margin-right: 35px;" href="dashCreateUser">
-                <a style="font-size: 18px; color: #000; margin-right: 7px;" href="dashCreateUser">
+            <button style="margin-bottom: 20px; font-size: 18px; border: #fff; background: #fff; color: #343752; margin-right: 35px;" href="dashcreateuser">
+                <a style="font-size: 18px; color: #000; margin-right: 7px;" href="dashcreateuser">
                      <span class="fa fa-user-plus" style="color: #343752; font-size: 20px;"> </span>
                     <b style="text-decoration: underline;">Create User</b>
+                </a>
+            </button>
+
+            <button style="margin-bottom: 20px; font-size: 18px; border: #fff; background: #fff; color: #343752; margin-right: 35px;" href="uploadusers">
+                <a style="font-size: 18px; color: #000; margin-right: 7px;" href="uploadusers">
+                    <span class="fa fa-user-plus" style="color: #343752; font-size: 20px;"> </span>
+                    <b style="text-decoration: underline;">Upload Users</b>
                 </a>
             </button>
 
@@ -258,6 +270,7 @@ else{
                         <i class="fa fa-save"></i> Save
                     </button>
 
+
                     <button type="submit" class="btn btn-sm" style="border-radius: 50px; background: #2d73b0; color: #fff; margin-bottom: 2%; box-shadow: 5px 5px 18px 1px #888888;">
                         <i class="fa fa-save"></i> Save and add another
                     </button>
@@ -265,6 +278,7 @@ else{
                     <button type="submit" class="btn btn-sm" style="border-radius: 50px; background: #2d73b0; color: #fff; margin-bottom: 2%; box-shadow: 5px 5px 18px 1px #888888;">
                         <i class="fa fa-save"></i> Save and continue editing
                     </button>
+
 
                     <button type="reset" class="btn btn-sm btn-secondary" style="border-radius: 50px; margin-bottom: 2%;"> x Cancel</button>
 
@@ -338,11 +352,11 @@ else{
                     form.classList.add('was-validated')
                 }, false)
             })
-    })();
+        })();
 
 
 
-    $('#createUserForm').on("submit", function(submitEvent){
+    $('#createuserform').on("submit", function(submitEvent){
 
         // form was successfully validated
         if(! submitEvent.isDefaultPrevented()) {
@@ -384,17 +398,18 @@ else{
                     });
 
                     setTimeout(function(){
-                        location.href = "congrat";
+                        location.href = "dashcreateuser";
                     }, 2500);
 
 
                 }
+
                 else{
 
                     Swal.fire({
                         icon: 'error',
-                        title: 'UserName Already exist',
-                        text: 'Please provide unique username',
+                        title: 'User Already exist',
+                        text: 'Please provide unique username and email',
 
                     });
 

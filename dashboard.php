@@ -104,7 +104,6 @@ else{
                         <span class="fa fa-map-marker" style="color: #e5e9f1; font-size: 60px;"> </span>
                         <span class="fa fa-plus-square" style="color: #343752; font-size: 20px;"> </span>
                         <b style="text-decoration: underline;">Add Division</b>
-
                     </button>
 
 

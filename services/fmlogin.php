@@ -33,6 +33,8 @@ if(mysqli_num_rows($result) > 0)
     $_SESSION['status'] = $row[6];
 
     echo "success";
+
+    audit_trail("User Logged in");
 }
 else{
     echo "fail";

@@ -12,6 +12,7 @@ $mysql = "UPDATE fm_users set password = '$password', status = '0', reg_time = n
 
 if (mysqli_query($conn, $mysql)) {
     echo "success";
+    audit_trail("Password Reset done");
 } else {
     echo "Error updating record: " . mysqli_error($conn);
 }
