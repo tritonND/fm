@@ -438,12 +438,11 @@ $result2 = mysqli_query($conn, $myqry2);
 
             // display the app-loader
             $('.app-loader').css("display", "block");
-            $('.app-loader-message').html("<div>Account Creation in progress...</div>" +
+            $('.app-loader-message').html("<div>Adding Cashbook Entry...</div>" +
                 "<div>PLEASE DO NOT CLOSE BROWSER</div>");
+
+
             // submit the from via ajax
-
-
-
             var x=$.ajax({
                 url: "services/fmcashbookentry", // Url to which the request is send
                 type: "POST",             // Type of request to be send, called as method
@@ -457,8 +456,8 @@ $result2 = mysqli_query($conn, $myqry2);
 
             x.done(function(myresponse)
             {
-                console.log("this is my",myresponse);
-                if(myresponse == 'success'){
+                // console.log("this is my",myresponse);
+                if(myresponse !== 'success'){
                     console.log(myresponse);
                     $('.app-loader').css("display", "none");
                     Swal.fire({
